@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cthulhu</title>
+    <script>
+        var inputNumber = prompt("Давай, вводи заветное число:")
+        var answerList = ""
+        for (var i = 1; i <= inputNumber; i++) {
+            if (i == inputNumber) {
+                answerList += i + "."
+                if (answerList === "1, " + inputNumber + ".") {
+                    answerList += " (Оно простое)"
+                }
+            } else if (inputNumber % i == 0) {
+                answerList += i + ", "
+            }
+        }
+        alert(answerList)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
