@@ -7,10 +7,11 @@
 </head>
 <script>
     function Square(number, index) {
+       var result = number;
         for (var i = 1; i < index; i++) {
-            number *= number
+            result *= number
         }
-        alert(number)
+        alert(result)
     }
     var num = prompt("Введите число, которое надо возвести в степень")
     var grade = prompt("Введите ту самую (степень)")
