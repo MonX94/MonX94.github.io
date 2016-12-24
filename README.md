@@ -1,1 +1,2 @@
-# symmetrical-disco
+# ДЗ по ШАГу
+Я сюда своё дз по ШАГу скидываю. Есть для этого сайт на Github Pages - MonX94.github.io
