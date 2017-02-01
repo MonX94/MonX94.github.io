@@ -4,7 +4,7 @@ var is_valid_input_test = /^\d{1,2}[./\-:]\d{1,2}[./\-:]\d{4}$/; //Провер�
 var is_valid_input = is_valid_input_test.test(input_date); // см сверху
 do {
     if (is_valid_input) { //Если правильно
-        var date_array = input_date.match(/\d{2,}/g); // [0] - день, [1] - месяц, а [2] - год. При 11.22.3344 будет 11, 22, 3344.
+        var date_array = input_date.match(/\d{1,}/g); // [0] - день, [1] - месяц, а [2] - год. При 11.22.3344 будет 11, 22, 3344.
         var day = parseInt(date_array[0], 10); // Соответственно день
         var month = parseInt(date_array[1], 10); // месяц
         var year = parseInt(date_array[2], 10); // и год.
