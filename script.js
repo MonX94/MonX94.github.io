@@ -9,7 +9,7 @@ do {
         var month = parseInt(date_array[1], 10); // месяц
         var year = parseInt(date_array[2], 10); // и год.
         if (year === 0) {
-
+            leap_year = false;
         } else if (year % 400 === 0) { // - Высокосен ли год?
             leap_year = true;
         } else if (year % 100 === 0) {
