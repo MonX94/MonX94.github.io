@@ -8,13 +8,15 @@ do {
         var day = parseInt(date_array[0], 10); // Соответственно день
         var month = parseInt(date_array[1], 10); // месяц
         var year = parseInt(date_array[2], 10); // и год.
-        if (year % 400 === 0) { // - Высокосен ли год?
+        if (year === 0) {
+
+        } else if (year % 400 === 0) { // - Высокосен ли год?
             leap_year = true;
         } else if (year % 100 === 0) {
             leap_year = false;
         } else if (year % 4 === 0) {
             leap_year = true;
-        } else{
+        } else {
             leap_year = false;
         }
 
