@@ -8,13 +8,14 @@ do {
         var day = parseInt(date_array[0], 10); // Соответственно день
         var month = parseInt(date_array[1], 10); // месяц
         var year = parseInt(date_array[2], 10); // и год.
-        if (year < 1) {
-
-        }
-        if (year % 4 == 0) { // - Высокосен ли год?
-            leap_year = true; // -  Да!
-        } else {
-            leap_year = false; // - Нет...
+        if (year % 400 === 0) { // - Высокосен ли год?
+            leap_year = true;
+        } else if (year % 100 === 0) {
+            leap_year = false;
+        } else if (year % 4 === 0) {
+            leap_year = true;
+        } else{
+            leap_year = false;
         }
 
         if (month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12) { //31 день в месяце
@@ -26,12 +27,12 @@ do {
         } else if (month === 2 && leap_year === true) { //Высокосный февраль, 29 дней
             days_in_month = 29;
         } else {
-            alert("Ошибка 2: Неправильный месяц. Проверьте написание месяца.")
+            alert("Ошибка 2: Неправильный месяц. Проверьте написание месяца.");
             break;
         }
 
         if (day < 1 || day > days_in_month) {
-            alert("Ошибка 3: Неправильный день. Проверьте день в дате, в феврале например 28 или 29 дней.")
+            alert("Ошибка 3: Неправильный день. Проверьте день в дате, в феврале например 28 или 29 дней.");
             break;
         }
 
@@ -39,24 +40,24 @@ do {
         next_month = GetNextDay(day, month, year)[1];
         next_year = GetNextDay(day, month, year)[2];
 
-        month_names = []
-        month_names[0] = "января"
-        month_names[1] = "февраля"
-        month_names[2] = "марта"
-        month_names[3] = "апреля"
-        month_names[4] = "мая"
-        month_names[5] = "июня"
-        month_names[6] = "июля"
-        month_names[7] = "августа"
-        month_names[8] = "сентября"
-        month_names[9] = "октября"
-        month_names[10] = "ноября"
-        month_names[11] = "декабря"
+        month_names = [];
+        month_names[0] = "января";
+        month_names[1] = "февраля";
+        month_names[2] = "марта";
+        month_names[3] = "апреля";
+        month_names[4] = "мая";
+        month_names[5] = "июня";
+        month_names[6] = "июля";
+        month_names[7] = "августа";
+        month_names[8] = "сентября";
+        month_names[9] = "октября";
+        month_names[10] = "ноября";
+        month_names[11] = "декабря";
         next_month_index = next_month - 1; //Номер в списке
 
-        alert("Следующий день - " + next_day + " " + month_names[next_month_index] + " " + next_year + " года")
+        alert("Следующий день - " + next_day + " " + month_names[next_month_index] + " " + next_year + " года");
     } else {
-        alert("Ошибка 1: Неправильно введена дата. Проверьте написание даты.")
+        alert("Ошибка 1: Неправильно введена дата. Проверьте написание даты.");
     }
 
 } while (false);
